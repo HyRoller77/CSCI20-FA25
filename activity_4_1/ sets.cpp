@@ -15,6 +15,8 @@ int main() {
 
     std::vector<char> d = { 'd', 'o', 'n', 't', ' ', 'p', 'a', 'n', 'i', 'c'};
 
+    std::vector<float> e = {1, 2, 3, 4};
+
     std::printf("%i\n", b.at(1));
 
     std::array<std::string, 2> b_str = {"hi", "there"};
