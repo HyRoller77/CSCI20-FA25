@@ -29,6 +29,8 @@ int main() {
 
     std::printf("%i\n", d.at(2));
 
+    std::printf("%f\n", f.at(1));
+
     std::printf("%s\n", c_str.at(0).c_str());
 
     std::printf("%s\n", c_str.at(1).c_str());
@@ -36,8 +38,6 @@ int main() {
     std::printf("%s\n", e_str.at(0).c_str());
 
     std::printf("%s\n", e_str.at(1).c_str());
-
-    std::printf("%f\n", f.at(1));
 
     return 0;
 }
