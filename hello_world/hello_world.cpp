@@ -1,11 +1,19 @@
 // ccp code
 #include <cstdio>
 #include <string>
+#include <vector>
 
-int my_sum(int x,int y) {
-        return x + y;
+ using std::printf;
+ using std::vector;
+
+char vegtible(char a, char b) {
+        return a + b;
     }
 int main() {
-    std::printf("%d\n", my_sum(4, 6));    
+    char a = 100;
+    char b = 1;
+    vegtible(254,1);
+    vector<int> squid = {0,1,2,3,4,5};
+    printf("%d", squid.at(0));    
     return 0;
 }    
