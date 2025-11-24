@@ -27,21 +27,21 @@ calc is using prefix notation, prefix stacking equations
     }
     }
     
-void choice(stack<int> st, int new_op) {
-    if(new_op == 9999) {
+void choice(stack<int> st, int op) {
+    if(op == 9999) {
         // addition
-        int (new_op + st.top());
+        int (op + st.top());
         st.pop();
-        addition_on_numbers(st, new_op);
+        addition_on_numbers(st, op);
     }
     else {
         // we see both numbers
-        printf("WRONG FUNCTION first number %d, second number %d", new_op + st.top());
+        printf("WRONG FUNCTION first number %d, second number %d", op + st.top());
     }
     return ;
 }
 
-int main(stack<int> st, int op) { 
+int main (stack<int> st, int op) {  
 
     // push the equation +11
     st.push(1);
