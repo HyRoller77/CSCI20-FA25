@@ -41,7 +41,7 @@ void choice(stack<int> st, int op) {
     return ;
 }
 
-int main (stack<int> st, int op) {  
+int main(stack<int> st, int op) {  
 
     // push the equation +11
     st.push(1);
