@@ -1,11 +1,9 @@
-#include<stack>
-#include<cstdio>
-
-using std::stack;
-using std::printf;
+#include "calc.hpp"
  
 int main() {
+
     stack<int> st = {};
+
 
     st.push(9);
     st.push(9998);
@@ -16,9 +14,11 @@ int main() {
     st = evaluate(st);
 
     printf("result: %d\n", st.top());
-    st.pop();
     return 0;
 }
+
+stack<int> evaluate (stack<int> st) {
+
     int x = st.top();
     st.pop();
 
@@ -35,6 +35,7 @@ int main() {
             st.pop();
             st.push(addition(y,z));
             st.push(temp);
+            return evaluate(st);
         }  
     } else if (x == 9998) {
         int y = st.top();
