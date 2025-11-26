@@ -5,10 +5,10 @@ int main() {
     stack<int> st = {};
 
     // load the stack carefully
-    st.push(8);
+    st.push(4);
     st.push(9998);
-    st.push(3);
     st.push(9);
+    st.push(5);
     st.push(9999);
 
     // run evaluate to evaluate the stack as an equation
