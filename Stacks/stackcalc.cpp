@@ -5,11 +5,11 @@ int main() {
     stack<int> st = {};
 
     // load the stack carefully
-    st.push(4);
+    st.push(2);
+    st.push(10001);
+    st.push(6);
+    st.push(6);
     st.push(9998);
-    st.push(9);
-    st.push(5);
-    st.push(9999);
 
     // run evaluate to evaluate the stack as an equation
     st = evaluate(st);
@@ -45,20 +45,23 @@ stack<int> evaluate (stack<int> st) {
         st.pop();
         int z = st.top();
         st.pop();
-        st.push(subtraction(y,z));
-    } else if (x == 9997) {
+        if (st.empty()) {
+            st.push(subtraction(y,z));    
+    }} else if (x == 9997) {
         int y = st.top();
         st.pop();
         int z = st.top();
         st.pop();
-        st.push(multiplication(y,z));
-    } else if (x == 10001) {
+        if (st.empty()) {
+            st.push(multiplication(y,z));
+    }} else if (x == 10001) {
         int y = st.top();
         st.pop();
         int z = st.top();
         st.pop();
-        st.push(division(y,z));
-    } else {
+        if (st.empty()) {
+            st.push(division(y,z));
+   }} else {
         printf("FAIL\n");
     }
 
