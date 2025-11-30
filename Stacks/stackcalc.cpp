@@ -6,10 +6,10 @@ int main() {
 
     // load the stack carefully
     st.push(2);
-    st.push(10001);
-    st.push(6);
-    st.push(6);
-    st.push(9998);
+    st.push(9997);
+    st.push(3);
+    st.push(21);
+    st.push(9999);
 
     // run evaluate to evaluate the stack as an equation
     st = evaluate(st);
@@ -46,22 +46,46 @@ stack<int> evaluate (stack<int> st) {
         int z = st.top();
         st.pop();
         if (st.empty()) {
-            st.push(subtraction(y,z));    
-    }} else if (x == 9997) {
+            st.push(subtraction(y,z));
+        } else {
+
+            int temp = st.top();
+            st.pop();
+            st.push(subtraction(y,z));
+            st.push(temp);
+            return evaluate(st);
+        }
+    } else if (x == 9997) {
         int y = st.top();
         st.pop();
         int z = st.top();
         st.pop();
         if (st.empty()) {
             st.push(multiplication(y,z));
-    }} else if (x == 10001) {
+        } else {
+
+            int temp = st.top();
+            st.pop();
+            st.push(multiplication(y,z));
+            st.push(temp);
+            return evaluate(st);
+        }
+    } else if (x == 10001) {
         int y = st.top();
         st.pop();
         int z = st.top();
         st.pop();
         if (st.empty()) {
             st.push(division(y,z));
-   }} else {
+        } else {
+
+            int temp = st.top();
+            st.pop();
+            st.push(division(y,z));
+            st.push(temp);
+            return evaluate(st);
+        }
+    } else {
         printf("FAIL\n");
     }
 
