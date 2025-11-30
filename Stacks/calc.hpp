@@ -35,3 +35,8 @@ int division (int , int);
 
 // evaluates a loaded stack
 stack<int> evaluate( stack<int> );
+
+int addition       (int l, int r)   { return l + r; }
+int subtraction    (int l, int r)   { return l - r; }
+int multiplication (int l, int r)   { return l * r; }
+int division       (int l, int r)   { return l / r; } 

@@ -6,7 +6,7 @@ int main() {
 
     // load the stack carefully
     st.push(2);
-    st.push(9997);
+    st.push(9999);
     st.push(3);
     st.push(21);
     st.push(9999);
@@ -92,7 +92,7 @@ stack<int> evaluate (stack<int> st) {
     return st;    
 }
 
-int addition(int l, int r)          { return l + r; }
-int subtraction(int l, int r)       { return l - r; }
-int multiplication(int l, int r)    { return l * r; }
-int division(int l, int r)          { return l / r; }
+//int addition(int l, int r)          { return l + r; }
+//int subtraction(int l, int r)       { return l - r; }
+//int multiplication(int l, int r)    { return l * r; }
+//int division(int l, int r)          { return l / r; }
