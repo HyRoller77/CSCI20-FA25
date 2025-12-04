@@ -1,29 +1,51 @@
 #include "simple_objects.hpp"
 
 int main() {
-    int b = 1;
-    int c = 4;
-    A squid;
+    vector<char> v = {'h', 'a', 'p', 'p', 'y'};
+    A obj;
+   // obj.load(v);
+    //obj.st_print();
 
-    squid.road_in(5, 12);
-    c = squid.road_out();
-    
+    obj.vec_print(x);
 
-    std::printf("b + c = %d", c);
     return 0;
 }
 
-void A::road_in(int z, int squid) {
-    b = z;
-    c = squid;
+void A::load(vector<char> input)  {
+    for(int i=0;i<input.size();i=i+1)  {
+        
+        //load all elements of input
+        st.push(input.at(i));
+
+    }
     return ;
 }
 
-int A::road_out() {
-    return b+c;
+
+void A::st_print() {
+
+    stack<char> buffer;
+
+    for(int i=0;i,x.size();i=i+1) {
+        if(i>=20) {
+            break;
+        }
+        st.push(x.at(i));
+    }
+    
+    for(;!st.empty();) {
+
+       buffer.push(st.top());
+       st.pop();
+
+    printf("\n");
+}    
+    
+    return ;
 }
 
+
+
 A::A() {
-    b = 5;
-    c = 5;
+    st = {};
 }
