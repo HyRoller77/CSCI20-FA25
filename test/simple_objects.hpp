@@ -3,18 +3,35 @@
 #include<vector>
 
 using std::stack;
+using std::printf;
 using std::vector;
 
-class A {
+
+
+class Calc {
 private:
-    stack<char> st;
+    struct dicho {
+        int num;
+        char op;
+    };
+    stack<dicho> st;
+    int addition        (int, int);
+    int subtraction     (int, int);
+    int multiplication  (int, int);
+    int division        (int, int);
+
+    stack<int> evaluate( stack<int> );
+
+    int addition       (int l, int r) { return l + r; }
+    int subtraction    (int l, int r) { return l - r; }
+    int multiplication (int l, int r) { return l * r; }
+    int division       (int l, int r) { return l / r; }
+
 public:
-    // constructor
-    A();
-    // loads character vector to be uploaded in st
-    void load(vector<char>);
-    //prints all contents of stack
-    void st_print();
-   //obfuscation
-    void vec_print(vector<char>);
+    Calc();
+    void road_in(vector<holding>);
+    struct holding {
+        int num;
+        int op;
+    } 
 };

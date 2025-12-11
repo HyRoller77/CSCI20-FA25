@@ -3,8 +3,8 @@
 int main() {
     vector<char> v = {'h', 'a', 'p', 'p', 'y'};
     A obj;
-   // obj.load(v);
-    //obj.st_print();
+    obj.load(v);
+    obj.st_print(x);
 
     obj.vec_print(x);
 
