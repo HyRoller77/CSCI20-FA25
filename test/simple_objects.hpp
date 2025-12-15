@@ -22,16 +22,12 @@ private:
 
     stack<int> evaluate( stack<int> );
 
-    int addition       (int l, int r) { return l + r; }
-    int subtraction    (int l, int r) { return l - r; }
-    int multiplication (int l, int r) { return l * r; }
-    int division       (int l, int r) { return l / r; }
 
 public:
     Calc();
-    void road_in(vector<char>);
+ //   void road_in(vector<char>);
     struct holding {
         int num;
         int op;
     } 
-};
+}

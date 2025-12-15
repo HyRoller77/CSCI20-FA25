@@ -1,8 +1,7 @@
 #include "simple_objects.hpp"
-#include "calc.hpp"
 
 int main() {
-    stack<char> st = {};
+    stack<int> st = {};
 
     st = evaluate(st);
 
@@ -10,16 +9,18 @@ int main() {
     return 0;
 }
 
+int addition (int l, int r) { return l + r; }
+int subtraction (int l, int r)  { return l - r; }
 
-stack<char> evaluate (stack<char> st) {
+stack<int> evaluate (stack<int> st) {
 
     char x = st.top();
     st.pop();
 
-    if (x == +) {
-        char y = st.top();
+    if (x = "+") {
+        int y = st.top();
         st.pop();
-        char z = st.pop();
+        int z = st.top();
         st.pop();
 
         if (st.empty()) {
@@ -36,7 +37,7 @@ stack<char> evaluate (stack<char> st) {
     } else if (x == -) {
         char y = st.top();
         st.pop();
-        char z = st.pop();
+        char z = st.top();
         st.pop();
 
         if (st.empty()) {
@@ -53,7 +54,7 @@ stack<char> evaluate (stack<char> st) {
     } else if (x == *) {
         char y = st.top();
         st.pop();
-        char z = st.pop();
+        char z = st.top();
         st.pop();
 
         if (st.empty()) {
@@ -69,7 +70,7 @@ stack<char> evaluate (stack<char> st) {
     } else if (x == /) {
         char y = st.top();
         st.pop();
-        char z = st.pop();
+        char z = st.top();
         st.pop();
     
         if (st.empty()) {
