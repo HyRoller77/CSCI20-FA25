@@ -29,7 +29,7 @@ private:
 
 public:
     Calc();
-    void road_in(vector<holding>);
+    void road_in(vector<char>);
     struct holding {
         int num;
         int op;
