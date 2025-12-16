@@ -10,24 +10,31 @@ using std::vector;
 
 class Calc {
 private:
-    struct dicho {
-        int num;
-        char op;
+    struct clowns {
+        int a;
+        char b;
     };
-    stack<dicho> st;
+    stack<clowns> clown_bakery;
     int addition        (int, int);
     int subtraction     (int, int);
     int multiplication  (int, int);
     int division        (int, int);
-
-    stack<int> evaluate( stack<int> );
-
-
 public:
-    Calc();
- //   void road_in(vector<char>);
-    struct holding {
-        int num;
-        int op;
-    } 
-}
+    Calc(); // initializes values
+    struct ice_cream {
+        int flavor;
+        int cone;
+        ice_cream(int a, char b) {
+            flavor = a;
+            cone = b;
+        }
+       
+    };
+    //tool function   
+    vector<clowns> map_ice_clown(vector<ice_cream>);
+    //Calc(); //intiializes values
+    // loads the stack
+    void german_village_clown_school(vector<ice_cream>);
+    
+    return ;
+};

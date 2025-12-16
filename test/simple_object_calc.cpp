@@ -17,7 +17,7 @@ stack<int> evaluate (stack<int> st) {
     char x = st.top();
     st.pop();
 
-    if (x = "+") {
+    if (x == "+") {
         int y = st.top();
         st.pop();
         int z = st.top();
