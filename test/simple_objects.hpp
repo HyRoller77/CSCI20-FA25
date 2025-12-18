@@ -11,8 +11,12 @@ using std::vector;
 class Calc {
 private:
     struct clowns {
-        int a;
-        char b;
+        int num;
+        char op;
+        clowns(int a, char b) {
+            num = a;
+            op =b;
+        }
     };
     stack<clowns> clown_bakery;
     int addition        (int, int);
@@ -20,7 +24,7 @@ private:
     int multiplication  (int, int);
     int division        (int, int);
 public:
-    Calc(); // initializes values
+   // Calc(); // initializes values
     struct ice_cream {
         int flavor;
         int cone;
@@ -36,5 +40,5 @@ public:
     // loads the stack
     void german_village_clown_school(vector<ice_cream>);
     
-    return ;
+
 };

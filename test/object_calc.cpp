@@ -18,8 +18,11 @@ int main() {
     return 0;
 }
 void Calc::german_village_clown_school(vector<ice_cream> x) {
-    map_ice_clown(x);
-    return;
+  vector<Calc::clowns> mapping = map_ice_clown(x);
+  for (int i=x.size(); i<=0; i=i-1) {
+    clown_bakery.push(mapping.at(i));
+  }
+    return ;
 }
 
 vector<Calc::clowns> Calc::map_ice_clown(vector<Calc::ice_cream> x) {
@@ -29,7 +32,7 @@ vector<Calc::clowns> Calc::map_ice_clown(vector<Calc::ice_cream> x) {
         //for each ice cream, make a new clown
         clowns c(x.at(i).flavor, x.at(i).cone);
         ret.push_back(c);
-        printf("%d, %c /n", c.a, c.b);
+        printf("%d, %c/n", c.num, c.op);
     }
     return ret;
 }
