@@ -19,10 +19,16 @@ private:
         }
     };
     stack<clowns> clown_bakery;
-    int addition        (int, int);
-    int subtraction     (int, int);
-    int multiplication  (int, int);
-    int division        (int, int);
+    int addition        (int l, int r)  { return l + r; }
+    int subtraction     (int l, int r)  { return l - r; }
+    int multiplication  (int l, int r)  { return l * r; }
+    int division        (int l, int r)  { return l / r; }
+
+
+    stack<int> evaluate( stack<int> );
+    
+    
+
 public:
    // Calc(); // initializes values
     struct ice_cream {
